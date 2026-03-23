@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ Refrigeration | Sangam Vihar AC Service</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Deep Blue
+                        secondary: '#3b82f6', // Light Blue
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .service-card:hover i { transform: scale(1.1); transition: transform 0.3s ease; }
+        .gallery-img:hover { transform: scale(1.05); transition: transform 0.3s ease; cursor: pointer; }
+        .animate-blob { animation: blob 7s infinite; }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animation-delay-2000 { animation-delay: 2s; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased relative">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="text-3xl text-primary font-bold mr-2"><i class="fa-solid fa-snowflake"></i></div>
+                    <div>
+                        <h1 class="font-bold text-xl text-primary leading-tight">SJ Refrigeration</h1>
+                        <p class="text-xs text-gray-500 font-medium tracking-wide">Sangam Vihar</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-secondary font-medium transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-secondary font-medium transition duration-300">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-secondary font-medium transition duration-300">Gallery</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-secondary font-medium transition duration-300">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-secondary font-medium transition duration-300">Contact</a>
+                    <a href="tel:+919540107155" class="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full font-semibold shadow-lg transition duration-300 flex items-center animate-pulse">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> Book Now
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-primary hover:text-secondary focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-20 shadow-lg z-40">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md border-b border-gray-100">Home</a>
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md border-b border-gray-100">Services</a>
+                <a href="#gallery" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md border-b border-gray-100">Gallery</a>
+                <a href="#reviews" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md border-b border-gray-100">Reviews</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 rounded-md">Contact</a>
+                <a href="tel:+919540107155" class="block w-full text-center mt-4 bg-primary text-white px-4 py-3 rounded-md font-bold shadow-md hover:bg-blue-800 transition">
+                    <i class="fa-solid fa-phone mr-2"></i> Call: 9540107155
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919540107155?text=Namaste%20Sanjeev%20Ji,%20mujhe%20AC%20service%20chahiye" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl z-50 flex items-center justify-center transition duration-300 hover:scale-110 border-2 border-white">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-blue-50 to-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6 text-center md:text-left order-2 md:order-1">
+                    <div class="inline-block bg-blue-100 text-secondary px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide border border-blue-200">
+                        <i class="fa-solid fa-award mr-1"></i> Sangam Vihar Ki No.1 AC Service
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Garmi Se Pareshan? <br/>
+                        <span class="text-secondary">Ab Shimla Jaisa</span> <br/>
+                        Mausam Ghar Par!
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                        "Safai aur Imandari ka dusra naam – <strong>SJ Refrigeration</strong>. Sanjeev aur unki team karegi aapke AC ki best service."
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="tel:+919540107155" class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl transition transform hover:-translate-y-1 flex justify-center items-center">
+                            <i class="fa-solid fa-phone-volume mr-2 animate-bounce"></i> Call Now
+                        </a>
+                        <a href="#services" class="bg-white border-2 border-primary text-primary hover:bg-blue-50 px-8 py-4 rounded-full font-bold text-lg transition flex justify-center items-center">
+                            View Services
+                        </a>
+                    </div>
+                </div>
+                <!-- Image Content -->
+                <div class="relative mt-4 md:mt-0 px-4 sm:px-0 order-1 md:order-2">
+                    <!-- Decorative blobs -->
+                    <div class="absolute top-0 right-0 -mr-8 -mt-8 w-64 h-64 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+                    <div class="absolute bottom-0 left-0 -ml-8 -mb-8 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+                    
+                    <img src="first image.jpeg" 
+                         alt="Technician repairing AC unit" 
+                         class="relative rounded-2xl shadow-2xl object-cover h-[350px] md:h-[500px] w-full border-4 border-white transform hover:scale-[1.02] transition duration-500"
+                         onerror="this.src='https://placehold.co/800x600/1e3a8a/white?text=SJ+Refrigeration+AC+Work'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Humari Suvidhayein</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Expert Solutions</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-primary transition">
+                        <i class="fa-solid fa-snowflake text-3xl text-primary group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Gas Charging</h4>
+                    <p class="text-gray-600">Perfect cooling ke liye gas leakage fix aur refilling.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-primary transition">
+                        <i class="fa-solid fa-hands-bubbles text-3xl text-primary group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Deep Cleaning</h4>
+                    <p class="text-gray-600">Jet pump cleaning - dhool mittti saaf, AC naya jaisa.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-primary transition">
+                        <i class="fa-solid fa-tools text-3xl text-primary group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Installation</h4>
+                    <p class="text-gray-600">Split ya Window AC ki safe aur strong fitting.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-xl transition duration-300 border border-gray-100 group text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-primary transition">
+                        <i class="fa-solid fa-microchip text-3xl text-primary group-hover:text-white transition duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Repairing</h4>
+                    <p class="text-gray-600">PCB, Compressor, Fan Motor - sabka ilaj yahan hai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Gallery Section (Humara Kaam) -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Humara Kaam</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Work Gallery</h2>
+                <p class="text-gray-600 mt-2">Dekhiye hum kaise safai aur perfection ke saath kaam karte hain.</p>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery Image 1 -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg h-64 group">
+                    <img src="work1.jpeg" alt="Work Photo 1" class="w-full h-full object-cover gallery-img transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">Deep Cleaning</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Image 2 -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg h-64 group">
+                    <img src="work2.jpeg" alt="Work Photo 2" class="w-full h-full object-cover gallery-img transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">PCB Repair</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Image 3 -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg h-64 group">
+                    <img src="work3.jpeg" alt="Work Photo 3" class="w-full h-full object-cover gallery-img transition duration-300">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">New Installation</p>
+                    </div>
+                </div>
+
+                <!-- Video Placeholder (If you have a video link, replace 'video.mp4') -->
+                <div class="relative overflow-hidden rounded-xl shadow-lg h-64 bg-gray-900 flex items-center justify-center group col-span-1 md:col-span-2 lg:col-span-3">
+                    <div class="text-center p-6">
+                        <button type="button"
+                        id="playvideo" class="text-6xl text-white mb-4 opacity-80 group-hover:opacity-100 transition">
+                            <i class="fa-solid fa-play-circle"></i>
+                        </button>
+                        <h4 class="text-white font-bold text-xl">Watch Our Process</h4>
+                        <p class="text-gray-300 text-sm">Humare video dekhein (Coming Soon)</p>
+                    </div>
+                    <!-- Real Video Tag example (Uncomment to use):
+                    <video controls class="absolute inset-0 w-full h-full object-cover">
+                        <source src="video1.mp4" type="video/mp4">
+                    </video>  -->
+
+                    <!-- Video Popup (centered, max-width 500px, responsive height) -->
+                    <div id="videoPopup" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+                        <div id="videoPopupBackdrop" class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+                        <div id="videoPopupContent" class="relative w-full max-w-[500px] mx-4 transform scale-95 transition-transform duration-300">
+                            <button id="videoPopupClose" class="absolute -top-3 -right-3 bg-white text-gray-800 rounded-full p-2 shadow-lg z-20 hover:bg-gray-100 focus:outline-none">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                            <div class="bg-black rounded-lg overflow-hidden">
+                                <video id="popupVideo" controls class="w-full h-auto max-h-[80vh] bg-black">
+                                    <source src="video1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Left: Image -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative group">
+                        <img src="Second image.jpeg"
+                             alt="Professional tools" 
+                             class="rounded-xl shadow-lg border-4 border-white object-cover h-[400px] w-full transform group-hover:scale-[1.01] transition"
+                             onerror="this.src='https://placehold.co/800x600/3b82f6/white?text=Professional+Tools'">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl border-l-4 border-primary z-10 hidden sm:block">
+                            <h4 class="font-bold text-lg text-gray-900">Sanjeev Technician</h4>
+                            <p class="text-gray-600 text-sm mt-1">Sangam Vihar Expert</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="lg:w-1/2 w-full">
+                    <h3 class="text-secondary font-bold tracking-wider uppercase text-sm mb-2">Kyun Chunein Humein?</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Bharosemand Kaam, Wajib Daam</h2>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fa-solid fa-circle-check text-2xl text-green-500 mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-900">Local Expert</h4>
+                                <p class="text-gray-600">Sangam Vihar ke har kone ki jaankari aur jaldi service.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fa-solid fa-circle-check text-2xl text-green-500 mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-900">Safai Ki Guarantee</h4>
+                                <p class="text-gray-600">Humare technician aapke ghar ki safai ka pura dhyan rakhte hain.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fa-solid fa-circle-check text-2xl text-green-500 mt-1"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-xl font-bold text-gray-900">Transparent Pricing</h4>
+                                <p class="text-gray-600">Jo daam batayenge, wahi lenge. Koi chupa hua kharcha nahi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Customer Review Form Section -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Customer Reviews</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Existing Testimonial -->
+            <div class="bg-primary text-white text-center p-8 rounded-2xl shadow-xl max-w-4xl mx-auto mb-16 relative overflow-hidden">
+                <i class="fa-solid fa-quote-left text-4xl text-blue-300 mb-4 opacity-50 block"></i>
+                <p class="text-xl font-light italic leading-relaxed">
+                    "Sangam Vihar mein maine bahut mechanic dekhe, par SJ Refrigeration jaisi safai aur imandari kahin nahi mili. Sanjeev ne gas leak fix ki aur ab kamra bilkul Shimla jaisa hai!"
+                </p>
+                <div class="mt-4">
+                    <div class="text-yellow-400 text-lg mb-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="font-bold">Happy Customer</p>
+                </div>
+            </div>
+
+            <!-- Write a Review Form -->
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Apna Review Dein</h3>
+                <form id="reviewForm" onsubmit="event.preventDefault(); sendReview();" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Aapka Naam</label>
+                        <input type="text" id="reviewName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-secondary" placeholder="Rahul Kumar" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Rating</label>
+                        <select id="reviewRating" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-secondary">
+                            <option value="5">⭐⭐⭐⭐⭐ (Excellent)</option>
+                            <option value="4">⭐⭐⭐⭐ (Very Good)</option>
+                            <option value="3">⭐⭐⭐ (Good)</option>
+                            <option value="2">⭐⭐ (Average)</option>
+                            <option value="1">⭐ (Poor)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">Message</label>
+                        <textarea id="reviewMessage" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-secondary" placeholder="Aapko humari service kaisi lagi?" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg transition shadow-lg flex items-center justify-center">
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Submit Review on WhatsApp
+                    </button>
+                    <p class="text-xs text-gray-500 text-center mt-2">*Review seedha humare WhatsApp par bheja jayega.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">SJ Refrigeration</h2>
+                <p class="text-gray-400 mb-6">Aapka bharosa, humari kamai.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="tel:+919540107155" class="inline-block bg-secondary hover:bg-blue-600 text-white px-8 py-3 rounded-full font-bold transition">
+                        <i class="fa-solid fa-phone mr-2"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/919540107155?text=Hi" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-bold transition">
+                        <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2024 SJ Refrigeration.</p>
+                <p class="mt-2 md:mt-0">Sangam Vihar, New Delhi</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Review Form Logic (WhatsApp Redirection)
+        function sendReview() {
+            var name = document.getElementById('reviewName').value;
+            var rating = document.getElementById('reviewRating').value;
+            var message = document.getElementById('reviewMessage').value;
+
+            // Format message for WhatsApp
+            var text = "*New Customer Review* %0a" +
+                       "------------------ %0a" +
+                       "*Name:* " + name + " %0a" +
+                       "*Rating:* " + rating + " Stars %0a" +
+                       "*Message:* " + message;
+
+            // Open WhatsApp
+            var url = "https://wa.me/919540107155?text=" + text;
+            window.open(url, '_blank');
+            
+            // Clear form
+            document.getElementById('reviewForm').reset();
+        }
+
+        // Video popup logic
+        (function(){
+            const openBtn = document.getElementById('playvideo');
+            const popup = document.getElementById('videoPopup');
+            const popupContent = document.getElementById('videoPopupContent');
+            const closeBtn = document.getElementById('videoPopupClose');
+            const backdrop = document.getElementById('videoPopupBackdrop');
+            const popupVideo = document.getElementById('popupVideo');
+
+            function openPopup() {
+                if(!popup) return;
+                popup.classList.remove('pointer-events-none','opacity-0');
+                popup.classList.add('opacity-100');
+                // animate scale
+                popupContent.classList.remove('scale-95');
+                popupContent.classList.add('scale-100');
+                // autoplay if desired (commented to avoid unexpected sound)
+                try { /* popupVideo.play(); */ } catch(e) {}
+            }
+
+            function closePopup() {
+                if(!popup) return;
+                popup.classList.remove('opacity-100');
+                popupContent.classList.remove('scale-100');
+                popupContent.classList.add('scale-95');
+                // after transition, hide interactions
+                setTimeout(()=>{
+                    popup.classList.add('pointer-events-none','opacity-0');
+                }, 250);
+                if(popupVideo){ popupVideo.pause(); popupVideo.currentTime = 0; }
+            }
+
+            if(openBtn) openBtn.addEventListener('click', openPopup);
+            if(closeBtn) closeBtn.addEventListener('click', closePopup);
+            if(backdrop) backdrop.addEventListener('click', closePopup);
+
+            document.addEventListener('keydown', (e)=>{
+                if(e.key === 'Escape') closePopup();
+            });
+        })();
+    </script>
+</body>
+</html>
